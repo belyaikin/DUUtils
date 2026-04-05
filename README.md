@@ -1,7 +1,7 @@
 # DUUtils
 
 A simple, poorly-written helper tool for working with AITU's Digital University, 
-that converts and serves data through an API endpoint in more convinient form.
+that converts and serves data through an API endpoint in more convenient form.
 
 
 It abuses the unprotected DU's schedule API endpoint (a user has access to schedules from other groups,) 
