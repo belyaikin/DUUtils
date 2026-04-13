@@ -4,11 +4,13 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 
 import scraper
-from database import find_schedule
+from controller import schedule_controller
 
 load_dotenv()
 
 app = FastAPI()
+
+app.include_router(schedule_controller.router)
 
 
 def scrape():
@@ -19,8 +21,3 @@ def scrape():
 
 if os.getenv("SCRAPE"):
     scrape()
-
-
-@app.get("/schedules/{group}")
-def get_schedule(group: str):
-    return find_schedule(group)
